@@ -12,6 +12,8 @@ A `package.json` (and `package-lock.json`) file with ESLint, Prettier and their 
 
 Biome config file `biome.json`. In addition to default config, it has git integration enabled, and has the experimental useSortedClasses (sorting of tailwind classes) rule enabled.
 
+Lefthook config file `lefthook.yml` with pre-commit hooks for Biome and TypeScript type checking.
+
 ## Usage
 
 1. Clone to your machine. Do this by:
