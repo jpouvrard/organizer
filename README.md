@@ -1,4 +1,4 @@
-# Starter React Appwrite
+# Organizer
 
 ## Contents
 
@@ -24,17 +24,19 @@ Testing library with vitest
 
    - Copying using [degit](https://github.com/Rich-Harris/degit) to download the files in the repo without the git history. (RECOMMENDED)
 
-     - `npx degit jpouvrard/starter-react-appwrite project-name`
+     - `npx degit jpouvrard/organizer project-name`
 
    - Cloning this repo to your machine. This will keep the git history of this repo.
 
-     - `git clone https://github.com/jpouvrard/starter-react-appwrite.git`
+     - `git clone https://github.com/jpouvrard/organizer.git`
 
    - Creating a repo using this template. Note that your repo will signify that it was built from this template.
-     - Click [Starter React Appwrite](https://github.com/jpouvrard/starter-react-appwrite/generate).
+     - Click [Organizer](https://github.com/jpouvrard/organizer/generate).
 
 2. Install dependencies though `npm install`.
 
 3. Copy .env.example to .env and fill in the values.
 
-4. You are good to go. Start the project with `npm run dev` and you will see an altered Vite starting screen with Vite, React, Biome and Tailwind styled using Tailwind classes.
+4. Install hooks `npx lefthook install`.
+
+5. You are good to go. Start the project with `npm run dev` and you will see an altered Vite starting screen with Vite, React, Biome and Tailwind styled using Tailwind classes.

@@ -7,7 +7,7 @@ export default function AuthLayout() {
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         src="src/assets/logo-jpdev-small.webp"
-                        alt="Starter React Appwrite logo"
+                        alt="Organizer logo"
                         className="mx-auto w-auto"
                         width="256"
                         height="256"

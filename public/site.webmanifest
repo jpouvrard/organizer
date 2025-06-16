@@ -1,6 +1,6 @@
 {
-    "name": "Starter",
-    "short_name": "Starter",
+    "name": "Organizer",
+    "short_name": "Organizer",
     "icons": [
         {
             "src": "/web-app-manifest-192x192.png",
