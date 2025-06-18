@@ -2,7 +2,7 @@ import { useActionState } from "react";
 import { redirect } from "react-router";
 
 import { Input } from "@/components/ui/input";
-import { useUser } from "@/lib/context/user";
+import { useUser } from "@/lib/context/UserContext";
 import { Button } from "./components/ui/button";
 import { Label } from "./components/ui/label";
 

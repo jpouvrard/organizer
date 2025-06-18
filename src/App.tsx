@@ -1,8 +1,8 @@
 import { Outlet } from "react-router";
 
-import { ThemeProvider } from "@/lib/context/theme";
-import { ToastContextProvider } from "@/lib/context/toast";
-import { UserProvider } from "@/lib/context/user";
+import { ThemeProvider } from "@/lib/context/ThemeContext";
+import { ToastContextProvider } from "@/lib/context/ToastContext";
+import { UserProvider } from "@/lib/context/UserContext";
 
 export default function App() {
     return (

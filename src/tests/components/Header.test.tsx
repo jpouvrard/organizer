@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 
 import Header from "@/components/Header";
-import { UserContext } from "@/lib/context/user";
+import { UserContext } from "@/lib/context/UserContext";
 
 describe("Header", () => {
     it("should render the login button if user not logged", () => {
