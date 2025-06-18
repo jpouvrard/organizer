@@ -20,17 +20,23 @@ type Params = ComponentProps<typeof Toast> & { duration?: number };
  */
 type ToastItem = ComponentProps<typeof Toast> & { id: number; timer: ReturnType<typeof setTimeout> };
 
+type ToastContextType = {
+    pushToastRef: { current: (toast: Params) => void };
+};
+
 /**
  * Default function for toast handling
  */
 const defaultPush = (_toast: Params) => {};
 
+const initialState: ToastContextType = {
+    pushToastRef: { current: defaultPush },
+};
+
 /**
  * React Context for toast management
  */
-const ToastContext = createContext({
-    pushToastRef: { current: defaultPush },
-});
+const ToastContext = createContext<ToastContextType>(initialState);
 
 /**
  * Provider component that supplies the toast context

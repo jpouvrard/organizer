@@ -4,18 +4,21 @@ import { type ReactNode, createContext, useContext, useEffect, useState } from "
 import { account } from "@/lib/appwrite";
 import { useToasts } from "@/lib/context/ToastContext";
 
-interface UserContextType {
+type UserContextType = {
     current: Models.User<Models.Preferences> | Models.Session | null;
     login: (email: string, password: string) => Promise<Error | null>;
     logout: () => Promise<void>;
     register: (email: string, password: string) => Promise<void>;
-}
+};
 
-export const UserContext = createContext<UserContextType | null>(null);
+const initialState: UserContextType = {
+    current: null,
+    login: () => Promise.resolve(null),
+    logout: () => Promise.resolve(),
+    register: () => Promise.resolve(),
+};
 
-export function useUser() {
-    return useContext(UserContext);
-}
+export const UserContext = createContext<UserContextType>(initialState);
 
 export function UserProvider({ children }: { children: ReactNode }) {
     const { pushToast } = useToasts();
@@ -65,4 +68,10 @@ export function UserProvider({ children }: { children: ReactNode }) {
     }, []);
 
     return <UserContext value={{ current: user, login, logout, register }}>{children}</UserContext>;
+}
+
+export function useUser() {
+    const context = useContext(UserContext);
+    if (context === undefined) throw new Error("useUser must be used within a UserProvider");
+    return context;
 }
