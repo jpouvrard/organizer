@@ -46,6 +46,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     async function logout() {
         await account.deleteSession("current");
         setUser(null);
+        window.location.replace("/");
     }
 
     async function register(email: string, password: string) {
