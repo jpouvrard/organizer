@@ -7,14 +7,14 @@ type SidebarContextType = {
 };
 
 const initialState: SidebarContextType = {
-    isExpanded: false,
+    isExpanded: true,
     toggleSidebar: () => null,
 };
 
 const SidebarContext = createContext<SidebarContextType>(initialState);
 
 export function SidebarProvider({ children }: { children: ReactNode }) {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(true);
 
     const toggleSidebar = () => {
         setIsExpanded((prev) => !prev);
