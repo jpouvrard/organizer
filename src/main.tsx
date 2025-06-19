@@ -6,6 +6,7 @@ import "@/index.css";
 import Dashboard from "@/Dashboard.tsx";
 import Home from "@/Home.tsx";
 import Login from "@/Login.tsx";
+import Notes from "@/Notes.tsx";
 import AppLayout from "@/layouts/AppLayout.tsx";
 import AuthLayout from "@/layouts/AuthLayout.tsx";
 import MainLayout from "@/layouts/MainLayout.tsx";
@@ -20,7 +21,10 @@ const router = createBrowserRouter([
             },
             {
                 Component: AppLayout,
-                children: [{ path: "dashboard", Component: Dashboard }],
+                children: [
+                    { path: "dashboard", Component: Dashboard, loader: () => ({ title: "Dashboard" }) },
+                    { path: "notes", Component: Notes, loader: () => ({ title: "Notes" }) },
+                ],
             },
             {
                 Component: AuthLayout,
