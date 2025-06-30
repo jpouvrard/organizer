@@ -10,9 +10,9 @@ export default function Header() {
     const { toggleSidebar } = useSidebar();
 
     return (
-        <header className="sticky top-0 z-99999 flex w-full bg-header-primary-foreground lg:border-b">
-            <div className="flex grow flex-col items-center justify-between lg:flex-row lg:px-6">
-                <div className="flex w-full items-center justify-between gap-2 border-gray-200 border-b px-3 py-3 sm:gap-4 lg:justify-normal lg:border-b-0 lg:px-0 lg:py-4 dark:border-gray-800">
+        <header className="flex w-full bg-header-primary-foreground lg:border-b">
+            <div className="flex grow flex-col items-center justify-between lg:flex-row lg:px-5">
+                <div className="flex w-full items-center justify-between gap-2 border-gray-200 border-b px-3 py-3 sm:gap-4 lg:justify-normal lg:border-b-0 lg:px-0 lg:py-5 dark:border-gray-800">
                     <Button aria-label="Toggle Sidebar" type="button" variant="outline" onClick={toggleSidebar}>
                         <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <title>Sidebar toggle button</title>

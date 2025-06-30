@@ -89,7 +89,7 @@ export default function Sidebar() {
         <aside
             className={`-translate-x-full fixed top-0 left-0 z-50 mt-16 flex h-screen ${isExpanded ? "w-[290px]" : "w-[90px]"} flex-col border-r bg-sidebar-primary-foreground px-5 text-primary transition-all duration-300 ease-in-out lg:mt-0 lg:translate-x-0`}
         >
-            <p className="py-8 font-bold text-2xl">Organizer</p>
+            <p className="pt-5 pb-8 font-bold text-2xl">Organizer</p>
             <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
                 <p className="pb-7">Menu</p>
                 <nav>
