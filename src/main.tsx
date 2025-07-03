@@ -1,8 +1,10 @@
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 
-import App from "@/App.tsx";
 import "@/index.css";
+
+import AddNote from "@/AddNote.tsx";
+import App from "@/App.tsx";
 import Dashboard from "@/Dashboard.tsx";
 import Home from "@/Home.tsx";
 import Login from "@/Login.tsx";
@@ -22,6 +24,7 @@ const router = createBrowserRouter([
             {
                 Component: AppLayout,
                 children: [
+                    { path: "add-note", Component: AddNote, loader: () => ({ title: "Ajouter une note" }) },
                     { path: "dashboard", Component: Dashboard, loader: () => ({ title: "Dashboard" }) },
                     { path: "notes", Component: Notes, loader: () => ({ title: "Notes" }) },
                 ],
