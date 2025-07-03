@@ -52,8 +52,9 @@ export default function Sidebar() {
             if (nav.subItems) {
                 for (const subItem of nav.subItems) {
                     if (isActive(subItem.path)) {
-                        setOpenSubmenu(nav.subItems.indexOf(subItem));
+                        setOpenSubmenu(navItems.indexOf(nav));
                         submenuMatched = true;
+                        break;
                     }
                 }
             }
