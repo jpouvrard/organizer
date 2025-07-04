@@ -7,4 +7,13 @@ const client = new Client()
 const account = new Account(client);
 const databases = new Databases(client);
 
-export { client, account, databases };
+async function getCurrentUser() {
+    try {
+        const user = await account.get();
+        return user;
+    } catch (error) {
+        return null;
+    }
+}
+
+export { client, account, databases, getCurrentUser };

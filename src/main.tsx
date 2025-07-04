@@ -12,6 +12,7 @@ import Notes from "@/Notes.tsx";
 import AppLayout from "@/layouts/AppLayout.tsx";
 import AuthLayout from "@/layouts/AuthLayout.tsx";
 import MainLayout from "@/layouts/MainLayout.tsx";
+import { protectedLoader } from "./lib/protectedLoader";
 
 const router = createBrowserRouter([
     {
@@ -24,9 +25,13 @@ const router = createBrowserRouter([
             {
                 Component: AppLayout,
                 children: [
-                    { path: "add-note", Component: AddNote, loader: () => ({ title: "Ajouter une note" }) },
-                    { path: "dashboard", Component: Dashboard, loader: () => ({ title: "Dashboard" }) },
-                    { path: "notes", Component: Notes, loader: () => ({ title: "Notes" }) },
+                    {
+                        path: "add-note",
+                        Component: AddNote,
+                        loader: () => protectedLoader({ title: "Ajouter une note" }),
+                    },
+                    { path: "dashboard", Component: Dashboard, loader: () => protectedLoader({ title: "Dashboard" }) },
+                    { path: "notes", Component: Notes, loader: () => protectedLoader({ title: "Notes" }) },
                 ],
             },
             {
